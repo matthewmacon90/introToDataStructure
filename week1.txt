@@ -87,10 +87,10 @@ Problem 13:
 1: Linear for time because of the loop and Linear for space because i has to look at each number.
 2: Constant for time and space because you are pushing and inserting into an empty array. 
 3: Linear for time because you are searching for the correct value, but the space is constant because you are always targeting the last index and you do not have to loop through.
-4:
-5:
-6:
-7:
-8:
-9:
-10:
+4: The time is Linear with the for loop looping through the array and the space is constant because you are retrieving what is in the index of that array. 
+5: Both the space and time here are constant because you are performing a mathmatical operation and not having to loop through anything. It's comparing values. 
+6:This one was tricky for me, but I believe it is constant because you are comparing numbers for time and I believe the space is linear because we have to compare the provided number to certain parts of the array values. However, I am not entirely sure. 
+7: This is Quadratic for time because of the two forEach methods. The space complexity is constant because you are pushing values you top of one another and not needing to reorder the index.
+8: Again another Quadratic for time because of the while and for loops and then for space it is constant because you are counting up? I'm a little unsure here. 
+9: Time is Quadratic due to the forEach & includes loop and space is constant because we are pushing the value onto the array.
+10: Quadratic because of the reduce and filter methods and the space is linear because of comparing and adding values together. Still unsure of this. 
