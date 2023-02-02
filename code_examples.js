@@ -29,7 +29,7 @@ const loopSkip = (num) => {
         console.log('numOfLoops: ', numOfLoops);
         // console.log('This is loop');
         console.log('arrayOfNum:', arrayOfNum[i]);
-        if (arrayOfNum[i] < arrayLength) {                           // If block is not running because we are getting never equal to or greater than array.
+        if (arrayOfNum[i] < arrayLength) {
             console.log(`arrayOfNum: ${arrayOfNum[i]} is less than the length of arrayLength: ${arrayLength}`);
             arrayOfNum.push(num);
             console.log('O(logn) Loop: ', arrayOfNum);
