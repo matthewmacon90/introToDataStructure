@@ -83,14 +83,34 @@ for (const num of nums) {       Linear
 };
 const convertToString = arr2.join('); Linear
 
+//****Note for Tony. When you see "//" these are my corrections. I am not looking to gain credit, but taking notes for the learning process.****//
 Problem 13: 
-1: Linear for time because of the loop and Linear for space because i has to look at each number.
+1: Linear for time because of the loop and Linear for space because i has to look at each number. 
+//Constant because you are accessing number. Half right.  Returning a number. Array does not grow in size
+
 2: Constant for time and space because you are pushing and inserting into an empty array. 
-3: Linear for time because you are searching for the correct value, but the space is constant because you are always targeting the last index and you do not have to loop through.
+//Linear for time because of the forEach loop. Linear for space because the array continues to grow. I was wrong here. 
+
+3: Linear for time because you are searching for the correct value, but the space is constant because you are always targeting the last index and you do not have to loop through. 
+// Accessing the array directly becomes constant when comparing numbers and when returning the value as a string and it doesn't grow it becomes constant because it never changes.
+
 4: The time is Linear with the for loop looping through the array and the space is constant because you are retrieving what is in the index of that array. 
+//Hint: Look at the return for space complexity. Constant because you are returning the sum.
+
 5: Both the space and time here are constant because you are performing a mathmatical operation and not having to loop through anything. It's comparing values. 
+//Dealing with returning a number. Constant for both. Mathmatical computation is constant. Not adding additional. When dealing with numbers it has a fixed occupancy of space. 
+
 6:This one was tricky for me, but I believe it is constant because you are comparing numbers for time and I believe the space is linear because we have to compare the provided number to certain parts of the array values. However, I am not entirely sure. 
+//Time is log O(logn).  Space complexity is constant because we are returning and dealing with numbers. 
+
 7: This is Quadratic for time because of the two forEach methods. The space complexity is constant because you are pushing values you top of one another and not needing to reorder the index.
+//Missed the answer. Watch recording.
+
 8: Again another Quadratic for time because of the while and for loops and then for space it is constant because you are counting up? I'm a little unsure here. 
+//Space is linear because array is expanding. 
+
 9: Time is Quadratic due to the forEach & includes loop and space is constant because we are pushing the value onto the array.
+//N^2 and space is linear because array is expanding.
+
 10: Quadratic because of the reduce and filter methods and the space is linear because of comparing and adding values together. Still unsure of this. 
+//Linear because chaining is not considered nesting. Filter and reduce are not together. Space is linear because array is expanding.
