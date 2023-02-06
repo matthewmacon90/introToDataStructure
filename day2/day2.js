@@ -37,13 +37,29 @@ and checks whether there are any duplicates among the argument passed in.
 You can solve this using the frequency counter pattern OR the multiple pointers pattern.
 */
 const areThereDuplicates = (arrOfLetters) => {
+    //step one: edge cases: 
+    if (arrOfLetters.length === 0) return false;
 
+    //step 2: create an empty object to count occurences. 
+    let occurences = {};
+
+    //step 3: create a for loop to go through the array.
+    for (let val of arrOfLetters) {
+        occurences[val] = (occurences[val] || 0) + 1;                     //Why do I need the parentheses???
+        // console.log(occurences);
+    };
+    
+    for (let keys in occurences) {
+        // console.log('keys:', keys)
+        if (occurences[keys] > 1) {
+            return true;
+        };
+    };
+    return false;
 };
 //Tests
-areThereDuplicates(['a', 'a', 'c', 'd']); // true
-areThereDuplicates(['a', 'b', 'c']); // false
-
-
+console.log('Problem2: ', areThereDuplicates(['a', 'a', 'c', 'd'])); // true
+console.log('Problem2: ', areThereDuplicates(['a', 'b', 'c'])); // false
 
 
 
@@ -72,7 +88,7 @@ const avgPair = (arr, avgTarget) => {
     return false;
 };
 // Test Cases:
-console.log(avgPair([1,2,3],2.5)) //true
-console.log(avgPair([1,3,3,5,6,7,10,12,19],8)) //true
-console.log(avgPair([-1,0,3,4,5,6], 4.1)) //false
-console.log(avgPair([],4)) //false
+console.log('Problem 3:', avgPair([1,2,3],2.5)) //true
+console.log('Problem 3:', avgPair([1,3,3,5,6,7,10,12,19],8)) //true
+console.log('Problem 3:', avgPair([-1,0,3,4,5,6], 4.1)) //false
+console.log('Problem 3:', avgPair([],4)) //false
