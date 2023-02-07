@@ -4,6 +4,8 @@
 and counts the unique values in the array.
 There can be negative numbers in the array, but it will always be sorted.
 */
+
+//Multiple Pointers Pattern
 const countUniqueValues = (arr) => {
     let uniqueValues = 0;
     let left = 0;
@@ -32,6 +34,8 @@ Write a function called, areThereDuplicates which accepts a array of letters,
 and checks whether there are any duplicates among the argument passed in.
 You can solve this using the frequency counter pattern OR the multiple pointers pattern.
 */
+
+//Frequency Counter Pattern
 const areThereDuplicates = (arrOfLetters) => {
     //step one: edge cases: 
     if (arrOfLetters.length === 0) return false;
@@ -65,6 +69,8 @@ array
 where the average of the pair equals the target average.
 There may be more than one pair that matches the average target.
 */
+
+//Multiple Pointers Pattern
 const avgPair = (arr, avgTarget) => {
     let left = 0;
     let right = arr.length - 1;
