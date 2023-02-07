@@ -4,7 +4,6 @@
 and counts the unique values in the array.
 There can be negative numbers in the array, but it will always be sorted.
 */
-
 const countUniqueValues = (arr) => {
     let uniqueValues = 0;
     let left = 0;
@@ -23,13 +22,10 @@ const countUniqueValues = (arr) => {
     return uniqueValues;
 };
 
-
-
 console.log('firstTest:', countUniqueValues([1,1,1,1,1,2])) // 2
 console.log('secondTest:', countUniqueValues([1,2,3,4,4,4,7,7,12,12,13])) // 7
 console.log('thirdTest:', countUniqueValues([])) // 0
 console.log('fourtTest:', countUniqueValues([-2,-1,-1,0,1])) // 4
-
 
 /*
 Write a function called, areThereDuplicates which accepts a array of letters,
@@ -60,8 +56,6 @@ const areThereDuplicates = (arrOfLetters) => {
 //Tests
 console.log('Problem2: ', areThereDuplicates(['a', 'a', 'c', 'd'])); // true
 console.log('Problem2: ', areThereDuplicates(['a', 'b', 'c'])); // false
-
-
 
 // Problem 3:
 /*
