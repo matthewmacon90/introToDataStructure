@@ -109,18 +109,17 @@ function lengthOfLongestSubstring(s) {
     let left = 0;
 
     for (let i = 0; i < s.length; i++) {
-        console.log('i: ', i);
-        console.log('s[i]: ', s[i]);
-        console.log('uniqueValue:', uniqueValue);
+        // console.log('i: ', i);
+        // console.log('s[i]: ', s[i]);
+        // console.log('uniqueValue:', uniqueValue);
         if (uniqueValue[s[i]] >= left) {
             left = uniqueValue[s[i]] + 1;
-            console.log('left: ', left);
-        } else {
-             uniqueValue[s[i]] = i;
-             console.log('uniqueValue:', uniqueValue);
-            //  console.log('Else unique I: ', uniqueValue[s[i]]);
+            // console.log('left: ', left);
         }
-        maxLength = Math.max(maxLength, i - left);
+        uniqueValue[s[i]] = i;
+        // console.log('uniqueValue:', uniqueValue);
+    //  console.log('Else unique I: ', uniqueValue[s[i]]);
+        maxLength = Math.max(maxLength, i - left + 1);
         console.log('maxLength: ', maxLength);
     }
     return maxLength;
