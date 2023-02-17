@@ -96,7 +96,22 @@ function collectStrings(obj) {
     console.log('Result: ', result);
     return result;
 };
-console.log(collectStrings(obj)); // ["foo", "bar", "baz"])
+
+function collectStrings2(obj) {
+    let result = [];
+    for(let key in obj) {
+        if(typeof obj[key] === 'string') {
+            result.push(obj[key]);
+        }
+        else if(typeof obj[key] === 'object') {
+            result = result.concat(collectStrings2(obj[key]));
+        }
+    }
+    return result;
+}
+
+
+//console.log(collectStrings2(obj)); // ["foo", "bar", "baz"])
 
 //Problem 4:
 // Using the bubble sort, please sort each profile 
@@ -146,12 +161,52 @@ const data = [
     }
     ]
 
-const bubbleSortData = (data) => {
+const bubbleSortDataAge = (data) => {
 //Create Wall
-
+//set condition to break out of loop if noswap occurs. 
+    let noSwap
+    for (let i = data.length - 1; i > 0; i--) {
+        console.log('i: ', i);
+        noSwap = true;
+        for (let j = 0; j < i; j++) {
+            console.log('j:', j);
+            console.log('This is data[j].age: ', data[j].age.get('age'));
+            if (data[j].age.get('age') > data[j + 1].age.get('age')) {
+                //write the swap. Declare variable for temp.
+                console.log('This is comparison:', [data[j], data[j+1]])
+                let temp = data[j];         //holds current value of data[j]
+                data[j] = data[j + 1];
+                data[j + 1] = temp;
+                noSwap = false; 
+            };
+        };
+        if (noSwap) break;
+    };
+    console.log('This is return data: ', data);
+    return data;
 };
-bubbleSortData(data);
+// bubbleSortDataAge(data);
 
+const bubbleSortDataRating = (data) => {
+    let noSwap;
+    for (let i = data.length - 1; i > 0; i--) {
+        noSwap = true;
+        for (let j = 0; j < i; j++) {
+            console.log('j:', j);
+            console.log('Fav Movie Rating: ', data[j].favoriteMovie[0].rating);
+            if (data[j].favoriteMovie[0].rating > data[j + 1].favoriteMovie[0].rating) {
+                let temp = data[j];
+                data[j] = data[j + 1];
+                data[j +1] = temp;
+                noSwap = false;
+            };
+        };
+        if (noSwap) break;
+    };
+    console.log('This is data: ', data);
+    return data
+};
+bubbleSortDataRating(data);
 
 
 // const sortedByAge = [  
@@ -189,13 +244,6 @@ bubbleSortData(data);
 //    ]  
 // } 
 // ] 
-
-
-
-
-
-
-
 
 // favorite movie by rating (solution should look like) 
 
