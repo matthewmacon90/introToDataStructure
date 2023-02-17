@@ -192,8 +192,8 @@ const bubbleSortDataRating = (data) => {
     for (let i = data.length - 1; i > 0; i--) {
         noSwap = true;
         for (let j = 0; j < i; j++) {
-            console.log('j:', j);
-            console.log('Fav Movie Rating: ', data[j].favoriteMovie[0].rating);
+            // console.log('j:', j);
+            // console.log('Fav Movie Rating: ', data[j].favoriteMovie[0].rating);
             if (data[j].favoriteMovie[0].rating > data[j + 1].favoriteMovie[0].rating) {
                 let temp = data[j];
                 data[j] = data[j + 1];
