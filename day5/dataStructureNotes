@@ -1,0 +1,50 @@
+Data Structures
+-There is no one best structure. 
+--Working with map/location data: use a graph to quickly find the points. 
+-If you need an ordered list with FAST inserts/removals at the beginning and end the you should use a Linked List. 
+-Web scraping nested HTML. Looking to gather information from other websites, you should use a tree!
+-Need to write a scheduler? Write a binary heap! 
+
+They all excel for different reasons! 
+
+ES2015 Class Syntax:
+-What is a class:
+    A blueprint for creating objects with pre-defined properties and methods.
+
+-The method to create new objects MUST be called constructor. 
+    Whenever a new student is create these two properties are created for that student. Additionally, the class keyword creates a constant, so you can NOT redefine it.
+
+Syntax for Class: {This DOES NOT create any students, just a blue print for what the students will have.} 
+class Student //Needs to be capital first letter. {
+    constructor(firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+    someInstanceMethod(){
+        //What should each object created from this class should be able to do? More indiviualized.             //To call you would use firstStudent.someInstanceMethod()
+    }
+    static someStaticMethod(){
+        //Acts as a utility/helper method for all objects.       //To call this you have to use Student.someStaticMethod(firstStudent, secondStudent)
+    }
+}
+//This class defines a pattern.
+
+class Tree {        //Again just a pattern.
+
+}
+
+Creating objects from Classes
+-Use the new keyword. 
+                        //Student is the class we are referencing. 
+let firstStudent = new Student('Colt', 'Steele');       //This creates a new Student object using the Student class blueprint we created. 
+let secondStudent = new Student('Matthew', 'Macon');
+
+-the word 'this' refers to the the indiviual instance of the object that was created. 
+
+
+Recap:
+-Classes are blueprints that when created make objects known as instances
+-Classes are created with the new keyword
+-The constructor function is a special function that gets run when the class is instantiated.
+-Instance methods can be added to classes similar to methods in objects
+-Class methods can be added using the static keyword.
