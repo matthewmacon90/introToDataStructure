@@ -175,27 +175,29 @@ class DoublyLinkedList{
     removeOccurences(val){
         if(!this.length) return undefined;
         
-        let currentNode = this.head;
-        let removeVal = currentNode;
-        // let counter = this.length - 1;
+        // let currentNode = this.head;
+        let removeVal = this.head;
+        let counter = 0;
+        while(counter < this.length){
             if(val) {
                 removeVal = removeVal.next;
-                console.log('removeVal: ', removeVal);
+                // console.log('removeVal: ', removeVal);
 
                 removeVal.prev.next = removeVal.next;
-                console.log('removeVal.prev.next: ', removeVal.prev.next);
+                // console.log('removeVal.prev.next: ', removeVal.prev.next);
                 removeVal.next.prev = removeVal.prev;
-                console.log('removeVal.next.prev: ', removeVal.next.prev);
+                // console.log('removeVal.next.prev: ', removeVal.next.prev);
 
-                // removeVal.next = null;
+                removeVal.next = null;
                 // console.log('removeVal.next: ', removeVal.next);
-                // removeVal.prev = null;
+                removeVal.prev = null;
                 // console.log('removeVal.prev: ', removeVal.prev);
 
                 removeVal = removeVal.next;
                 console.log('removeVal: ', removeVal);
-                // counter--;
+                counter++;
             }
+        }
         this.length--;
         return removeVal;
     }
